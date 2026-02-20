@@ -3,7 +3,7 @@ import time
 import numpy as np
 import os
 
-PORT = 'COM4'
+PORT = 'COM18'
 BAUD_RATE = 115200
 GESTURE_NAMES = ['rest', 'fist', 'index', 'peace', 'thumbs_up', 'ok', 'gang_gang']
 REPS_PER_GESTURE = 12
