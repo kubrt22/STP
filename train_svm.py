@@ -26,6 +26,7 @@ def train_and_evaluate():
     # Train SVM with RBF kernel
     print("\nTraining SVM...")
     svm = SVC(kernel='rbf', C=10.0, gamma='scale', random_state=42)
+    # svm = SVC(kernel='rbf', C=10.0, gamma=0.001, random_state=42)
     svm.fit(x_train_scaled, y_train)
 
     # Evaluate
