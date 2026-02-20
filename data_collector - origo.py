@@ -5,7 +5,7 @@ import os
 
 PORT = 'COM5'
 BAUD_RATE = 115200
-GESTURE_NAMES = ['gang_gang']
+GESTURE_NAMES = ['rest', 'fist', 'index', 'peace', 'thumbs_up', 'ok', 'gang_gang']
 REPS_PER_GESTURE = 12
 DURATION_PER_REP = 3  # seconds
 CHANNELS = 3
@@ -29,7 +29,7 @@ def collect_gesture_data(gesture_name, rep_num, duration=3):
     
     while time.time() - start_time < duration:
         if ser.in_waiting:
-            line = ser.readline().decode('utf-8', errors='ignore').strip()
+            line = ser.readline().decode('utf-8').strip()
             try:
                 values = [int(x) for x in line.split(',')]
                 if len(values) == CHANNELS:
